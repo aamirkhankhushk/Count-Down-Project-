@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <div id="countlabel">0</div>
+    <button id="decreasebtn">Decrease</button>
+    <button id="resetbtn">Reset</button>
+    <button id="increasebtn">Increase</button>
+    
+
+    <script>
+        // Your JavaScript code goes here
+        let count = 0;
+
+        document.getElementById("decreasebtn").onclick = function() {
+            count -= 1;
+            document.getElementById("countlabel").innerHTML = count;
+        }
+
+        document.getElementById("resetbtn").onclick = function() {
+            count = 0;
+            document.getElementById("countlabel").innerHTML = count;
+        }
+
+        document.getElementById("increasebtn").onclick = function() {
+            count += 1;
+            document.getElementById("countlabel").innerHTML = count;
+        }
+    </script>
+</body>
+</html>

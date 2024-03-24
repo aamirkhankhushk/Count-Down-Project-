@@ -1,0 +1,12 @@
+#countlabel{
+    display: block; 
+    text-align: center; 
+    font-size: 80px; 
+    background-color:silver;
+    margin-top: 30px ;
+    padding-top: 30px;
+}
+
+#decreasebtn{
+    margin-top: 30px;
+}
