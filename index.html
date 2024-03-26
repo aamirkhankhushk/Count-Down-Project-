@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint" content="width-device, intital-scale=1">
-    <title> Temperature Conversion</title>
-    <link rel="stylesheet" href="style.css">  
+    
+    
 </head>
 <body>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <form>
-    <h1> Temperature Conversion</h1>
-    <input type="number" id="textBox" value="0"><br>
+    <div id="countlabel">0</div>
+    <button id="decreasebtn">Decrease</button>
+    <button id="resetbtn">Reset</button>
+    <button id="increasebtn">Increase</button>
+    
 
-    <input type="radio" id="toFahernheit" name="unit">
-    <label for="toFahernheit">Celcius to Fahernheit </label><br> 
+    <script>
+        // Your JavaScript code goes here
+        let count = 0;
 
+        document.getElementById("decreasebtn").onclick = function() {
+            count -= 1;
+            document.getElementById("countlabel").innerHTML = count;
+        }
 
-    <input type="radio" id="toCelcius" name="unit">
-    <label for="toCelcius">Fahernheit to Celcius </label><br> 
+        document.getElementById("resetbtn").onclick = function() {
+            count = 0;
+            document.getElementById("countlabel").innerHTML = count;
+        }
 
-    <button type="button" onclick="convert()">Submit</button>
-    <p id="result"></p>
-</form>
-<script src="script.js"></script>
+        document.getElementById("increasebtn").onclick = function() {
+            count += 1;
+            document.getElementById("countlabel").innerHTML = count;
+        }
+    </script>
 </body>
-
-
 </html>
